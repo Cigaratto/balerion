@@ -1,7 +1,7 @@
 ## Project Description:
 
 - This project was developed as part of a frontend coding test of Balerion.
-- You can visit the project via [link: ]
+- You can visit the project via [link:https://balerion-ten.vercel.app/ ]
 - This project use localStorage to store session data since this is a mock project without a backend service.
 
 ## Tech Stack
