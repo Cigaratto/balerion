@@ -1,12 +1,21 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Prompt } from "next/font/google";
 import "./globals.css";
+import { AuthProvider } from "@/context/auth-context";
+import { CardProvider } from "@/context/card-context";
 
-// ✅ ใช้ Inter แทน Geist
+
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
   display: "swap",
+});
+
+const prompt = Prompt({
+  variable: "--font-prompt",
+  subsets: ["thai"],
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -20,8 +29,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="th" className={inter.variable}>
-      <body className="font-sans antialiased">{children}</body>
+    <html lang="th" className={`${inter.variable} ${prompt.variable}`}>
+      <body className="font-sans antialiased bg-[#181919] overscroll-none">
+        <AuthProvider><CardProvider>{children}</CardProvider></AuthProvider>
+      </body>
     </html>
   );
 }

@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Project Description:
 
-## Getting Started
+- This project was developed as part of a frontend coding test of Balerion.
+- You can visit the project via [link: ]
+- This project use localStorage to store session data since this is a mock project without a backend service.
 
-First, run the development server:
+## Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Next.js** – React-based framework for server-side rendering and routing  
+- **Tailwind CSS** – Utility-first CSS framework for responsive UI  
+- **shadcn/ui** – Component library for building accessible UIs  
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Installation & Setup
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Clone Repository:**
+    
+    ```bash
+    git clone https://github.com/Cigaratto/balerion.git
+    ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Install Dependencies:**
 
-## Learn More
+    ```bash
+    pnpm install
+    ```
+- **Run the project:**
 
-To learn more about Next.js, take a look at the following resources:
+    ```bash
+    pnpm dev
+    ```
+## Manual
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- This project support 2 types of accounts:
+    
+    **Role:ADMIN:**
+    - username: admin1
+    - password: 1234
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+    **Role:USER:**
+    - username: user1
+    - password: 1234
 
-## Deploy on Vercel
+## User Roles
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **ADMIN:**
+    - Can log in
+    - Has full access to all users' cards
+    - Can add card
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **USER:**
+    - Can log in
+    - Can view only their own cards
+    - Can add card
+
+## Features
+
+- Includes form validation for login inputs.
+- Displays clear error messages when authentication fails or input is invalid.
+- The replacing of passwords masked style into dash is avoided due to security and practicality concerns.
