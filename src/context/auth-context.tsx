@@ -66,7 +66,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const logout = () => {
     setEmail(null);
     setRole(null);
-    localStorage.clear();
     router.push("/auth/login");
   };
 

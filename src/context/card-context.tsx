@@ -36,7 +36,7 @@ const CardContext = createContext<CardData | undefined>(undefined);
 export const CardProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
-  const [cards, setCards] = useState<Card[]>([]);
+  const [cards, setCards] = useState<Card[]>([]) ;
   const [isAdding, setIsAdding] = useState(false);
   const [newTagCards, setNewTagCards] = useState<string[]>([]);
 
@@ -45,7 +45,8 @@ export const CardProvider: React.FC<{ children: React.ReactNode }> = ({
     const storedData = localStorage.getItem("cards");
     if (storedData) {
       setCards(JSON.parse(storedData));
-    } else {
+    }
+    else {
       setCards(initialCards); 
     }
   }, []);
